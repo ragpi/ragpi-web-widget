@@ -49,7 +49,7 @@ export const ChatWidget = ({
         messages: [...messages, { role: "user", content: message }],
       };
 
-      const response = await fetch(ragpiGatewayUrl, {
+      const response = await fetch(`${ragpiGatewayUrl}/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
